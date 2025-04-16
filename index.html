@@ -34,6 +34,7 @@
         background: #0f172a;
         color: #f1f5f9;
       }
+      
       header {
         background: linear-gradient(to right, #1a3733, #203a43, #541d4a);
         padding: 2rem 1rem;
@@ -160,16 +161,20 @@
         padding-left: 1.2rem;
         margin-top: 0.5rem;
       }
+      
       #internships {
         padding: 60px 20px;
-        background-color: #f9f9f9;
+        background-color: transparent;
         text-align: center;
       }
       
       #internships h2 {
-        font-size: 2.5rem;
-        margin-bottom: 40px;
-        color: #2c3e50;
+        font-size: 2.2rem;
+        color: inherit;
+        margin-bottom: 2rem;
+        border-bottom: 2px solid #e5e7eb;
+        padding-bottom: 0.5rem;
+        display: inline-block;
       }
       
       .internship-container {
@@ -180,50 +185,110 @@
       }
       
       .internship-card {
-        background: #fff;
-        border-radius: 12px;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        background-color: #f1f5f9;
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+        overflow: hidden;
         max-width: 900px;
         width: 100%;
-        overflow: hidden;
-        transition: transform 0.3s ease;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
       }
       
       .internship-card:hover {
-        transform: scale(1.02);
-      }
-      
-      .internship-text {
-        padding: 25px 30px;
-        text-align: left;
-      }
-      
-      .internship-text h3 {
-        font-size: 1.5rem;
-        margin-bottom: 15px;
-        color: #34495e;
-      }
-      
-      .internship-text p {
-        font-size: 1rem;
-        color: #555;
-        line-height: 1.6;
+        transform: translateY(-5px);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
       }
       
       .internship-img {
-        width: 100%;
-        max-height: 500px;
-        overflow: hidden;
+        width: 40%;
+        background: #f1f5f9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
       }
       
       .internship-img img {
         width: 100%;
-        height: auto;
-        display: block;
-        object-fit: cover;
-        border-top: 1px solid #eee;
+        max-height: 280px;
+        object-fit: contain;
+        border-radius: 8px;
+      }
+      
+      .internship-text {
+        width: 60%;
+        text-align: left;
+        padding: 20px 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      
+      .internship-text h3 {
+        font-size: 1.4rem;
+        color: #1f2937;
+        margin-bottom: 10px;
+        font-weight: 600;
+      }
+      
+      .internship-text p {
+        font-size: 1rem;
+        color: #374151;
+        line-height: 1.6;
+      }
+      
+      /* 🌙 Dark Mode Support */
+      .dark-mode .internship-card {
+        background-color: #1e293b;
+        box-shadow: 0 6px 20px rgba(255, 255, 255, 0.05);
+      }
+      
+      .dark-mode #internships h2 {
+        border-color: #334155;
+      }
+      
+      .dark-mode .internship-img {
+        background-color: #1e293b;
+      }
+      
+      .dark-mode .internship-text h3 {
+        color: #f8fafc;
+      }
+      
+      .dark-mode .internship-text p {
+        color: #cbd5e1;
+      }
+      
+      /* 📱 Responsive */
+      @media (max-width: 768px) {
+        .internship-card {
+          flex-direction: column;
+        }
+      
+        .internship-img,
+        .internship-text {
+          width: 100%;
+        }
+      
+        .internship-text {
+          padding: 20px;
+          text-align: center;
+        }
+      
+        .internship-text h3 {
+          text-align: center;
+        }
+      }
+      
+      
+      .internship-card,
+      .internship-text,
+      .internship-img,
+      .internship-text h3,
+      .internship-text p {
+        transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
       }
       .download-resume {
         text-align: center;
@@ -350,7 +415,7 @@
             </p>
           </div>
           <div class="internship-img">
-            <img src="1727229363384.jpeg" alt="Cisco Internship Certificate">
+            <img src="images/1727229363384.jpeg" alt="Cisco Internship Certificate">
           </div>
         </div>
     
@@ -363,7 +428,7 @@
             </p>
           </div>
           <div class="internship-img">
-            <img src="1737886544310.jpeg" alt="Salesforce Internship Certificate">
+            <img src="images/1737886544310.jpeg" alt="Salesforce Internship Certificate">
           </div>
         </div>
     
@@ -385,7 +450,7 @@
       </div>
       
       <div class="download-resume">
-        <a href="701_resume.pdf" target="_blank">Download Resume (PDF)</a>
+        <a href="/path/to/Sri_Manikanta_Akula_Resume.pdf" target="_blank">Download Resume (PDF)</a>
       </div>
     </section>
     <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" 
