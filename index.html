@@ -7,12 +7,21 @@
     <title>Sri Manikanta Akula | IoT & Cybersecurity Engineer</title>
     <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <meta property="og:title" content="Sri Manikanta Akula | Portfolio">
+    <meta property="og:description" content="IoT, Cybersecurity & AI enthusiast. Explore my projects, skills, and experience.">
+    <meta property="og:image" content="https://yourdomain.com/banner-image.jpg"> <!-- Optional -->
+    <meta property="og:type" content="website">
+
     <script>
       function toggleDarkMode() {
         document.body.classList.toggle('dark-mode');
       }
     </script>
     <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      
       body {
         font-family: 'Poppins', sans-serif;
         margin: 0;
@@ -30,6 +39,10 @@
         padding: 2rem 1rem;
         text-align: center;
         color: #fff;
+      }
+      h2{
+        display: flex;
+        justify-content: center;
       }
       nav a {
         margin: 0 1rem;
@@ -80,9 +93,14 @@
         cursor: pointer;
       }
       .project-card:hover {
-        transform: translateY(-8px) scale(1.02);
-        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        transform: translateY(-10px) scale(1.03);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
       }
+      
+      .download-resume a {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+      
       .dark-mode .project-card {
         background: #1e293b;
         color: #f8fafc;
@@ -108,18 +126,104 @@
       }
       .contact-icons {
         display: flex;
-        justify-content: center;
-        gap: 1.5rem;
+        justify-content: center; /* centers horizontally */
+        align-items: center;
+        gap: 2rem;
         margin-top: 1rem;
       }
+      
       .contact-icons a {
-        color: #1e3a8a;
         font-size: 2rem;
-        transition: transform 0.2s;
+        color: #1e3a8a;
+        transition: transform 0.3s, color 0.3s;
       }
+      
       .contact-icons a:hover {
         transform: scale(1.2);
         color: #0ea5e9;
+      }
+      .experience-card {
+        background: #f1f5f9;
+        padding: 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        max-width: 800px;
+        margin: 1rem auto;
+      }
+      
+      .dark-mode .experience-card {
+        background: #1e293b;
+        color: #f1f5f9;
+      }
+      
+      .experience-card ul {
+        padding-left: 1.2rem;
+        margin-top: 0.5rem;
+      }
+      #internships {
+        padding: 60px 20px;
+        background-color: #f9f9f9;
+        text-align: center;
+      }
+      
+      #internships h2 {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+        color: #2c3e50;
+      }
+      
+      .internship-container {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+      }
+      
+      .internship-card {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        max-width: 900px;
+        width: 100%;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+      }
+      
+      .internship-card:hover {
+        transform: scale(1.02);
+      }
+      
+      .internship-text {
+        padding: 25px 30px;
+        text-align: left;
+      }
+      
+      .internship-text h3 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        color: #34495e;
+      }
+      
+      .internship-text p {
+        font-size: 1rem;
+        color: #555;
+        line-height: 1.6;
+      }
+      
+      .internship-img {
+        width: 100%;
+        max-height: 500px;
+        overflow: hidden;
+      }
+      
+      .internship-img img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+        border-top: 1px solid #eee;
       }
       .download-resume {
         text-align: center;
@@ -148,7 +252,9 @@
         }
       }
     </style>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
   </head>
   <body>
     <button onclick="toggleDarkMode()" class="toggle-mode">Toggle Mode</button>
@@ -163,7 +269,7 @@
       </nav>
     </header>
 
-    <section id="about">
+    <section id="about" data-aos="fade-up">
       <h2>About Me</h2>
       <p>
         I am Sri Manikanta Akula, currently pursuing B.Tech in IoT & Cyber Security including Blockchain Technology at MVGR College of Engineering. I'm passionate about building innovative systems, from digitalizing canteens to creating AI-driven shopping assistants. I'm constantly exploring technologies like AI/ML, Embedded Systems, and Cloud Computing.
@@ -189,10 +295,6 @@
         <span class="skill-tag">Node.js</span>
         <span class="skill-tag">SQL</span>
         <span class="skill-tag">MongoDB</span>
-        <span class="skill-tag">AWS</span>
-        <span class="skill-tag">Google Cloud</span>
-        <span class="skill-tag">TensorFlow</span>
-        <span class="skill-tag">PyTorch</span>
         <span class="skill-tag">IoT Protocols</span>
         <span class="skill-tag">Cybersecurity</span>
       </div>
@@ -201,38 +303,100 @@
     <section id="projects">
       <h2>Projects</h2>
       <div class="projects">
-        <div class="project-card">
+        <div class="project-card" data-aos="zoom-in">
           <h3>College Canteen Digitalisation</h3>
           <p>Built and deployed a digital platform to streamline food ordering and reduce wait times at MVGR College. Improved efficiency and user satisfaction for students and staff.</p>
         </div>
-        <div class="project-card">
+        <div class="project-card" data-aos="zoom-in">
           <h3>Virtual Personal Shopping Assistant</h3>
           <p>Developed a voice-activated shopping assistant using NLTK and Python. Enabled intuitive product browsing and cart management using natural language processing.</p>
         </div>
-        <div class="project-card">
-          <h3>Obstacle Detection Bot</h3>
-          <p>Worked with a team to create an IoT bot using Arduino and Raspberry Pi for real-time object detection and navigation using sensors and motor control.</p>
+        <div class="project-card" data-aos="zoom-in">
+          <h3>Obstacle Detection and Avoidance Bot</h3>
+          <p>Worked with a team to create an IoT bot using Arduino and Raspberry Pi for real-time Obstacle Avoidance and navigation using sensors and motor control.</p>
+        </div>
+        <div class="project-card" data-aos="zoom-in">
+          <h3>Web Based solution for Gated-Communities</h3>
+          <p>Contributes myself as a backend developer for building Web-Based Application for the Gated Communities simplifying the task in the communities using automation with the help of Node.js and web technologies </p>
         </div>
       </div>
     </section>
-
-    <section id="contact">
+    <section id="experiences" data-aos="fade-up">
+      <h2>Experiences</h2>
+      <div class="experience-card">
+        <h3>2-Week Technical Workshop – IIIT Sri City</h3>
+        <p><strong>May 2024</strong></p>
+        <p>
+          Participated in an intensive 2-week program on <strong>IoT and Autonomous Systems</strong> at IIIT Sri City. The workshop covered:
+          <ul>
+            <li>IoT & Applications</li>
+            <li>Intelligent Autonomous Systems</li>
+            <li>Digital Twin</li>
+          </ul>
+          The program provided a comprehensive understanding of emerging technologies through hands-on and conceptual sessions.
+        </p>
+      </div>
+    </section>  
+    <section id="internships" data-aos="fade-up">
+      <h2>Internships</h2>
+      <div class="internship-container">
+        
+        <div class="internship-card">
+          <div class="internship-text">
+            <h3>Cisco AICTE Virtual Internship Program</h3>
+            <p><strong>Duration:</strong> May – July 2024</p>
+            <p>
+              Successfully completed a virtual internship in <strong>Cybersecurity</strong> offered by Cisco Networking Academy. Gained foundational knowledge in securing networks and digital infrastructure.
+            </p>
+          </div>
+          <div class="internship-img">
+            <img src="images/1727229363384.jpeg" alt="Cisco Internship Certificate">
+          </div>
+        </div>
+    
+        <div class="internship-card">
+          <div class="internship-text">
+            <h3>Salesforce Developer Virtual Internship – SmartInternz</h3>
+            <p><strong>Duration:</strong> Nov 2024 – Jan 2025</p>
+            <p>
+              Completed an 8-week internship focused on <strong>Salesforce Development</strong>. Learned modules like Apex, Flow Automation, LWC & API, and completed super badges including Apex Specialist and Developer Super Set.
+            </p>
+          </div>
+          <div class="internship-img">
+            <img src="images/1737886544310.jpeg" alt="Salesforce Internship Certificate">
+          </div>
+        </div>
+    
+      </div>
+    </section>      
+    <section id="contact" data-aos="fade-up">
       <h2>Contact Me</h2>
       <p>Email: <a href="mailto:akulasrimanikanta@gmail.com">akulasrimanikanta@gmail.com</a></p>
       <p>Location: Vizianagaram, Andhra Pradesh, 535003</p>
       <p>Phone: +91 82476 95409</p>
       <div class="contact-icons">
-        <a href="https://github.com/AKULASRIMANIKANTA" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/sri-manikanta-akula-186979259?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/AKULASRIMANIKANTA" target="_blank" title="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/sri-manikanta-akula-186979259" target="_blank" title="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        
       </div>
       
       <div class="download-resume">
         <a href="/path/to/Sri_Manikanta_Akula_Resume.pdf" target="_blank">Download Resume (PDF)</a>
       </div>
     </section>
+    <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" 
+style="position:fixed;bottom:2rem;right:2rem;background:#1e3a8a;color:white;padding:0.6rem 1rem;border:none;border-radius:8px;cursor:pointer;">⬆️ Top</button>
 
     <footer>
       &copy; 2025 Sri Manikanta Akula | Portfolio
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 800, once: true });
+    </script>
   </body>
 </html>
