@@ -182,8 +182,9 @@
         flex-direction: column;
         gap: 40px;
         align-items: center;
+        padding: 0 1rem;
       }
-      
+        
       .internship-card {
         display: flex;
         flex-direction: row;
@@ -193,6 +194,7 @@
         overflow: hidden;
         max-width: 900px;
         width: 100%;
+        margin-bottom: 1rem;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
       }
       
@@ -261,10 +263,12 @@
         color: #cbd5e1;
       }
       
-      /* 📱 Responsive */
       @media (max-width: 768px) {
         .internship-card {
           flex-direction: column;
+          align-items: center;
+          text-align: center;
+          padding: 1rem;
         }
       
         .internship-img,
@@ -272,15 +276,32 @@
           width: 100%;
         }
       
+        .internship-img {
+          padding: 0;
+          background: none;
+        }
+      
+        .internship-img img {
+          max-width: 100%;
+          height: auto;
+          border-radius: 0;
+        }
+      
         .internship-text {
-          padding: 20px;
-          text-align: center;
+          padding: 1rem;
         }
       
         .internship-text h3 {
+          font-size: 1.3rem;
           text-align: center;
+          margin-bottom: 0.75rem;
+        }
+      
+        .internship-text p {
+          font-size: 0.95rem;
         }
       }
+
       
       
       .internship-card,
